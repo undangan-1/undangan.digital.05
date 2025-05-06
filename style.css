@@ -1,0 +1,578 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.cover {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cover img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.text-content {
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  animation: slideUp 2s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.text-content h1 {
+  font-family: "Yellowtail", cursive;
+  font-size: 3.5rem;
+  margin-top: -3rem;
+}
+
+.text-content h2 {
+  font-family: "Yellowtail", cursive;
+  font-size: 2.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+.text-content h3 {
+  font-family: "Eczar", serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+#nama-tamu {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px #00000088;
+}
+
+.button {
+  background-color: #ffffffcc;
+  padding: 10px 10px;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #fff;
+}
+
+.flower-container img {
+  width: 100px; /* Sesuaikan ukuran jika perlu */
+  height: auto;
+  /* margin-top: 3rem; */
+  margin: 3rem auto 0 auto; /* Atas 3rem, kanan & kiri auto untuk center, bawah 0 */
+  display: block; /* Diperlukan agar margin auto bekerja */
+}
+
+.isi h2,
+.informasi h2,
+.penutup h2 {
+  font-family: "Yellowtail", cursive;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 3rem auto 3rem auto; /* Atas 3rem, kanan & kiri auto untuk center, bawah 0 */
+  display: block; /* Diperlukan agar margin auto bekerja */
+}
+
+.end h2 {
+  position: relative;
+}
+
+.isi p,
+.penutup p,
+.amplop p {
+  text-align: center;
+  padding: 0.5rem 7rem;
+  font-size: 1.2rem;
+}
+
+.isi h3 {
+  font-family: "Yellowtail", cursive;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.isi h4 {
+  font-family: "Eczar", serif;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.doa {
+  background: url("./img/latar/doa.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.quote-box {
+  /* background-color: rgba(255, 255, 255, 0.85); */
+  /* putih transparan */
+  padding: 1rem;
+  max-width: 900px;
+  text-align: center;
+  /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); */
+}
+
+.sanskrit {
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2f4f4f;
+}
+
+.source {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.translation {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.card-resepsi {
+  background-color: #6b8e76;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 450px;
+  margin: 20px auto;
+  /* font-family: "Segoe UI", sans-serif; */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-item {
+  text-align: center;
+}
+
+.card-item .icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.card-item .text {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.card-footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.maps-container {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.maps-container h3 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.maps-responsive {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Atur tinggi tetap */
+  display: flex;
+  justify-content: center; /* Tengah horizontal */
+  align-items: center; /* Tengah vertikal */
+}
+
+.maps-responsive iframe {
+  width: 70%;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.btn-maps-wrapper {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.btn-maps {
+  display: inline-block;
+  background-color: #6b8e76;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: -1rem;
+}
+
+.btn-maps i {
+  margin-right: 8px;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.btn-maps:hover {
+  background-color: #438b5a;
+}
+
+.daun {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.daun img {
+  width: 120px; /* ukuran kecil */
+  transform: rotate(20deg);
+}
+
+.open-button {
+  margin: 2rem;
+  margin-left: 35rem;
+  padding: 12px 24px;
+  background-color: #6b8e76;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* overflow: auto; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  position: fixed;
+  /* Uncomment jika ingin modal menempel di layar */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 1% auto;
+  padding: 20px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.bank-box {
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 13px 0;
+}
+
+.bank-logo {
+  height: 50px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.copy-button {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background-color: #6b8e76;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  /* font-weight: bold; */
+  font-size: 0.8rem;
+}
+
+.copy-button:hover {
+  background-color: #6b8e76;
+}
+
+.footer-undangan {
+  background-color: #6b8e76;
+  color: #fff;
+  text-align: center;
+  padding: 10px 10px;
+  font-size: 0.95rem;
+  margin-top: 2rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer-undangan p {
+  margin: 6px 0;
+}
+
+.footer-undangan a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-undangan a:hover {
+  text-decoration: underline;
+}
+
+.footer-undangan i {
+  margin-right: 5px;
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+
+/* Efek muncul saat discroll */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.scroll-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Styling untuk tombol musik di kanan bawah */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2.8rem;
+  background: none;
+  border: none;
+  color: #000;
+  z-index: 9999;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .text-content h1 {
+    font-size: 3rem;
+    margin-top: -5rem;
+  }
+
+  .text-content h2 {
+    font-size: 2rem;
+  }
+
+  .text-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    background-color: #ffffffcc;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #fff;
+  }
+
+  .isi p,
+  .penutup p,
+  .amplop p {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .isi h2,
+  .informasi h2,
+  .penutup h2 {
+    font-size: 2rem;
+    margin: 2rem auto;
+  }
+
+  .isi h3 {
+    font-size: 1.3rem;
+  }
+
+  .isi h4 {
+    font-size: 1rem;
+  }
+
+  .flower-container img {
+    width: 70px;
+    margin-top: 2rem;
+  }
+
+  .sanskrit {
+    font-style: italic;
+    font-size: 1rem;
+    /* margin-bottom: -1.5rem; */
+    color: #2f4f4f;
+    margin: 1rem auto; /* Tengah-tengah */
+    padding: 0 -4rem; /* Padding kiri-kanan untuk jarak dari tepi */
+    text-align: center;
+  }
+
+  .source {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+
+  .translation {
+    font-size: 1rem;
+    color: #333;
+    max-width: 90%; /* Perbesar lebar maksimum */
+    margin: 0 auto; /* Tengah-tengah */
+    padding: 0 -1px; /* Padding kiri-kanan untuk jarak dari tepi */
+    text-align: center;
+  }
+
+  .card-resepsi {
+    width: 70%;
+  }
+
+  .card-body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .maps-responsive {
+    height: 250px;
+  }
+
+  .maps-responsive iframe {
+    width: 90%;
+    height: 100%;
+  }
+
+  .btn-maps {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .daun img {
+    width: 80px;
+  }
+
+  .open-button {
+    margin: 2rem auto;
+    display: block;
+  }
+
+  .modal-content {
+    width: 85%;
+    margin-top: -4rem;
+    /* margin: 1% auto; */
+    padding: 16px;
+  }
+
+  .close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .copy-button {
+    font-size: 0.75rem;
+    padding: 8px 14px;
+    background-color: #6b8e76;
+  }
+
+  .corek {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .copy-button:hover {
+    background-color: #587862;
+  }
+
+  .footer-undangan {
+    font-size: 0.85rem;
+  }
+
+  #nama-tamu {
+    font-size: 1/5rem;
+  }
+}
